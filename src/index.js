@@ -12,12 +12,7 @@ module.exports = function toReadable(number) {
         resulltString += " " + numberStrings[number]
         number = 0
     } else {
-        resulltString += " " + dozens[Math.trunc(number / 10) - 2]
-        number = number % 10
-    }
-
-    if (number > 0) {
-        resulltString += " " + numberStrings[number]
+        resulltString += " " + dozens[Math.trunc(number / 10) - 2] + " " + numberStrings[number % 10]
     }
 
     return resulltString.trim()
